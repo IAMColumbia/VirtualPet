@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Models.Dog">
+    <Position X="4.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACAEAAAAAEAAAQAAAAAAAQAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Mammal">
+    <Position X="3.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Mammal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Pet">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAAEAAAEQAEAAAAAAAQAACAAAAAAIAQAAAAAAAA=</HashCode>
+      <FileName>Models\Pet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Cat">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Toy">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAEAAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Toy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.SparkelyBall" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SparkelyBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.SqueakyBall" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SqueakyBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Ball" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Basenji" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Basenji.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="8.83" />
+</ClassDiagram>

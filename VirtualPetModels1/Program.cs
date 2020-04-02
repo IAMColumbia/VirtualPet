@@ -1,4 +1,5 @@
 ﻿using System;
+using Models;
 
 namespace VirtualPetModels1
 {
@@ -7,6 +8,10 @@ namespace VirtualPetModels1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            //TODO test classes
+            Dog d = new Dog();
+            
+            
             //TODO make game
         }
     }

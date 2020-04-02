@@ -5,12 +5,11 @@ namespace Models
 {
     //Least accessibilty principal
     class VirtualPetGame
-    {
-
-        Player player; 
-        List<Toy> Toys;
-        List<Pet> Pets;
-
+    { 
+        Player player;
+        ToyStore toyStore;
+        PetStore petStore;
+        
         public VirtualPetGame()
         {
             player = new Player();
@@ -23,34 +22,21 @@ namespace Models
         /// </summary>
         private void SetupGame()
         {
-            InitializeToys();
-            InitailzePets();
+            toyStore = new ToyStore();
+            petStore = new PetStore();
+            
         }
 
-        private void InitailzePets()
-        {
-            Pets = new List<Pet>()
-            {
-                new Dog("fido", 3),
-                new Basenji() { Name = "Cheddar"},
-                new Cat() { Name="Bella"}
-            };
-        }
-
-        private void InitializeToys()
-        {
-            Toys = new List<Toy>()
-            {
-                new SparkelyBall(),
-                new SqueakyBall(),
-                new DeadRat()
-            };
-        }
-
+        /// <summary>
+        /// Starts game 
+        /// 1. Setup Player
+        /// 2. Setup Pet
+        /// 3. Play the game
+        /// </summary>
         public virtual void Start()
         {
-            Console.WriteLine(ShowBanner());
-            //SetupPlayer();
+            Console.WriteLine(ShowBanner());  //fancy banner for game
+            SetupPlayer();
             SetPlayerPet();
             PlayVirtualPet();
             Console.WriteLine("Bye");
@@ -61,23 +47,21 @@ namespace Models
         {
             Console.Write("What is your name?");
             player.Name = Console.ReadLine();
-
         }
 
         public void SetPlayerPet()
         {
             Console.WriteLine("Choose a pet:");
-            foreach (Pet p in Pets)
+            foreach (Pet p in petStore.Pets)
             {
-                Console.WriteLine($"{Pets.IndexOf(p) + 1}\t{p.ToString().Replace("ConsoleApp3DogInClass.", "")}\tNamed:{p.Name}");
-                
+                Console.WriteLine($"{petStore.Pets.IndexOf(p) + 1}\t{p.ToString().Replace("ConsoleApp3DogInClass.", "")}\tNamed:{p.Name}");
             }
             string whatTheyTyped = Console.ReadLine();
             int index = 0;
             int.TryParse(whatTheyTyped, out index);
             try
             {
-                player.MyPet = Pets[index - 1];
+                player.MyPet = petStore.Pets[index - 1];
             }
             catch (Exception ex)
             {
@@ -86,16 +70,16 @@ namespace Models
                 Console.WriteLine("that is not an option");
                 SetPlayerPet();
             }
-            
         }
 
+        bool isPlaying; //Local object to determine if we are playing
         public void PlayVirtualPet()
         {
-            bool isPlaying = true;
+            isPlaying = true;
 
             while(isPlaying)
             {
-                //Game Loop
+                //Main user interaction loop ie Main Game Loop
                 Console.WriteLine("What wood you like to do?");
                 string option = Console.ReadLine();
                 switch(option.ToLower())
@@ -135,7 +119,7 @@ namespace Models
         }
 
         /// <summary>
-        /// Sorry about this method I'm our of time
+        /// Sorry about this method I'm out of time
         /// </summary>
         /// <returns></returns>
         public string ShowChoiceOptions()
@@ -151,9 +135,9 @@ namespace Models
         private Toy GetConsoleToy()
         {
             Console.WriteLine("Please Choose a new toy:");
-            foreach (Toy t in Toys)
+            foreach (Toy t in toyStore.Toys)
             {
-                Console.WriteLine($"{Toys.IndexOf(t) + 1}\t{t.ToString().Replace("ConsoleApp3DogInClass.", "")}\tNamed:{t.Name}");
+                Console.WriteLine($"{toyStore.Toys.IndexOf(t) + 1}\t{t.ToString().Replace("ConsoleApp3DogInClass.", "")}\tNamed:{t.Name}");
 
             }
             string whatTheyTyped = Console.ReadLine();
@@ -162,11 +146,11 @@ namespace Models
             Toy toy = new SparkelyBall() ;
             try
             {
-                toy = Toys[index - 1];
+                toy = toyStore.Toys[index - 1];
             }
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.ToString()); //log error to console
                 Console.WriteLine("that is not an option");
                 GetConsoleToy();
             }

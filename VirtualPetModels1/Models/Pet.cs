@@ -24,7 +24,6 @@ namespace Models
 
         }
 
-
         public void GiveToy(Toy t)
         {
             this.CurrentToy = t; //replcedcurrent toy
@@ -38,8 +37,6 @@ namespace Models
 
         public string PlayToys()
         {
-            //do some toy stuff here
-
             this.Happiness += this.CurrentToy.HappyPower;
 
             return $"{this.Name} plays with {this.CurrentToy.Name}";
@@ -53,6 +50,5 @@ namespace Models
 
             return s;
         }
-
     }
 }
