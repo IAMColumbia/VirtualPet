@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using VirtualPetModels1;
 
 namespace Models
 {
     //Least accessibilty principal
-    class VirtualPetGame
+    class VirtualPetGame : Game
     { 
         Player player;
         ToyStore toyStore;
@@ -20,7 +21,7 @@ namespace Models
         /// <summary>
         /// Sets up collections for the game
         /// </summary>
-        private void SetupGame()
+        public override void SetupGame()
         {
             toyStore = new ToyStore();
             petStore = new PetStore();
@@ -33,7 +34,7 @@ namespace Models
         /// 2. Setup Pet
         /// 3. Play the game
         /// </summary>
-        public virtual void Start()
+        public override void Start()
         {
             Console.WriteLine(ShowBanner());  //fancy banner for game
             SetupPlayer();
@@ -72,7 +73,6 @@ namespace Models
             }
         }
 
-        bool isPlaying; //Local object to determine if we are playing
         public void PlayVirtualPet()
         {
             isPlaying = true;
